@@ -18,11 +18,12 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import cmpmemecreator.composeapp.generated.resources.Res
 import cmpmemecreator.composeapp.generated.resources.compose_multiplatform
+import com.karslan.cmpmemecreator.core.theme.MemeCreatorTheme
 
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
+    MemeCreatorTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
             modifier = Modifier
