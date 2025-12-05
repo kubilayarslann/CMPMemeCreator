@@ -3,14 +3,14 @@ package com.karslan.cmpmemecreator.meme_editor.presentation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.karslan.cmpmemecreator.core.theme.MemeCreatorTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.compose.viewmodel.koinViewModel
 
 
 @Composable
 fun MemeEditorUIContent(
-    viewModel: MemeEditorViewModel = viewModel()
+    viewModel: MemeEditorViewModel = koinViewModel()
 ) {
 
     val state by viewModel.state.collectAsStateWithLifecycle()
